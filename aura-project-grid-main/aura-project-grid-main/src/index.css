@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 230 80% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 25% 10%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 230 80% 96%;
+    --accent-foreground: 230 80% 40%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 230 80% 56%;
+
+    --radius: 0.5rem;
+
+    /* Priority colors */
+    --priority-critical: 0 72% 51%;
+    --priority-high: 25 95% 53%;
+    --priority-medium: 45 93% 47%;
+    --priority-low: 142 71% 45%;
+
+    /* Status colors */
+    --status-todo: 220 15% 70%;
+    --status-progress: 230 80% 56%;
+    --status-review: 270 60% 56%;
+    --status-done: 142 71% 45%;
+
+    /* Collaboration user colors */
+    --user-1: 340 82% 52%;
+    --user-2: 262 83% 58%;
+    --user-3: 173 80% 40%;
+    --user-4: 30 90% 50%;
+
+    /* Drag and drop */
+    --drag-shadow: 0 20px 60px -10px hsl(220 25% 10% / 0.25);
+    --drop-zone-active: 230 80% 96%;
+
+    /* Surface */
+    --surface-raised: 0 0% 100%;
+    --surface-overlay: 220 20% 97%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+}
